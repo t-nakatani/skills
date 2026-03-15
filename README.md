@@ -10,7 +10,6 @@ skills/                          # → .claude/skills/ にコピーして使う
 ├── session-review/              #   セッション終了時の振り返り・改善提案
 ├── pause-session/               #   セッション一時停止・復帰（Markdown ベース）
 ├── session-dig/                 #   過去セッション JSONL 検索
-├── find-skills/                 #   skills.sh エコシステムからスキル検索
 └── spawn-agent/                 #   新しい Terminal タブでエージェント起動
 
 agents/                          # → .claude/agents/ にコピーして使う
@@ -126,11 +125,6 @@ uv run claude_platform/cron/manage.py install
 過去の Claude Code セッション JSONL を検索・閲覧する。
 キーワード AND 検索、最近のセッション一覧、セッション詳細表示をサポート。
 Python スクリプト (`scripts/session_search.py`) で高速に全履歴をスキャンする。
-
-### find-skills
-
-[skills.sh](https://skills.sh/) エコシステムからスキルを検索・インストールする。
-`npx skills find [query]` / `npx skills add <package>` のラッパー。
 
 ### spawn-agent
 

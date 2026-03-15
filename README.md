@@ -10,7 +10,8 @@ skills/                          # → .claude/skills/ にコピーして使う
 ├── session-review/              #   セッション終了時の振り返り・改善提案
 ├── pause-session/               #   セッション一時停止・復帰（Markdown ベース）
 ├── session-dig/                 #   過去セッション JSONL 検索
-└── spawn-agent/                 #   新しい Terminal タブでエージェント起動
+├── spawn-agent/                 #   新しい Terminal タブでエージェント起動
+└── cron-manage/                 #   Cron Registry 管理（登録・状態確認・有効化等）
 
 agents/                          # → .claude/agents/ にコピーして使う
 └── code-reviewer.md             #   コミット・ブランチの技術レビュー
@@ -130,6 +131,10 @@ Python スクリプト (`scripts/session_search.py`) で高速に全履歴をス
 
 macOS Terminal の新しいタブで独立した Claude Code エージェントを起動する。
 並列作業や別タスクの委任に使用。`-p` モード（自律実行）と対話モードをサポート。
+
+### cron-manage
+
+Claude Cron Registry の管理スキル。ジョブの登録・状態確認・有効化/無効化・ログ確認・手動実行・設定変更・削除を対話的に行う。自然言語のスケジュール指定（「2時間ごと」「毎朝9時」）を cron 式に自動変換する。`claude_platform/cron/manage.py` のラッパー。
 
 ## フックの連携図
 

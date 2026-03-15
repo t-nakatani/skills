@@ -1,0 +1,28 @@
+defaults:
+  timeout_sec: 300
+  model: sonnet
+  max_turns: 20
+  max_budget_usd: 0.50
+  no_session_persistence: true
+  notify:
+    on_success: true
+    on_failure: true
+  log_retention_days: 14
+
+jobs:
+  # Example job — replace with your own
+  example-health-check:
+    schedule: "0 */2 * * *"
+    description: "Example health check (replace with your skill)"
+    prompt: "/your-skill-name"
+    timeout_sec: 300
+    model: sonnet
+    max_turns: 15
+    max_budget_usd: 0.30
+    allowed_tools:
+      - Read
+      - Bash
+      - Grep
+      - Glob
+      - Skill
+    enabled: false

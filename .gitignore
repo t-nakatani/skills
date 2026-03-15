@@ -1,0 +1,5 @@
+# Cron runtime files
+claude_platform/cron/.env
+claude_platform/cron/logs/
+claude_platform/cron/locks/
+claude_platform/cron/__pycache__/

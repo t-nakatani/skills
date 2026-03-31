@@ -12,6 +12,7 @@
 | session-end-review | UserPromptSubmit | (all) | ユーザー入力が "close" の場合、/session-review → コミット → マーカー出力を指示 |
 | session-close-on-marker | Stop | (all) | アシスタント出力にマーカーを検出 → session-cleanup → プロセス kill |
 | skill-usage-log | PostToolUse | Skill | Skill ツール呼び出しを `.claude/skill-usage.jsonl` に JSONL 記録 |
+| statusline | Notification | (all) | ステータスライン表示 — cwd, git branch, model, ctx%, cost, time をカラー出力 |
 | debug-dump | (任意) | — | 任意のイベントの stdin JSON を `.claude/tmp/hook-debug/` にダンプ。開発・デバッグ用 |
 
 ## セッションライフサイクル
